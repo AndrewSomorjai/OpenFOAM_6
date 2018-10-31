@@ -7,6 +7,10 @@
 #+OPTIONS: author:nil ^:{}
 # Copyright (c) 2015-2018 OpenFOAM Foundation.
 
+This is a precompiled OpenFOAM repository built for i386 processors on Linux. 
+This repository was compiled on an Ubuntu 18.04 LTS distribution with an i386 
+AMD processor using g++ 7.3.0 and GCC 7.3.0.
+
 * About OpenFOAM
   OpenFOAM is a free, open source computational fluid dynamics (CFD) software
   package released by the OpenFOAM Foundation. It has a large user base across
