@@ -1,0 +1,61 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       volScalarField;
+    location    "0.8";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    leftWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 0;
+    }
+    rightWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 0;
+    }
+    lowerWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        value           uniform 0;
+    }
+    atmosphere
+    {
+        type            totalPressure;
+        rho             rho;
+        psi             none;
+        gamma           1;
+        p0              uniform 0;
+        value           nonuniform List<scalar> 
+46
+(#8]KËwƒ°0åµ7Ç:±/½Ö_ò±×±/ß£ ¦²Œ*d:VQ³“”]ê³¢®¯ií³­z´‚®òÉ³–@G@òl]´‹‘Ì8°W´HÖ.U´Á³xCøA;`J³$Šäð}Í¶²§Ù  5²\Õ£9ó¡±7C›
+ù±ˆG¨Úh~°’Ìf”@é¯ºi‰öÌN¯Z¿Î³®¤FÆ‰F÷®§Ø|QH e®IÁ½%>Ùø®ÀÏ‰ ä¯ŠU¨¬«Ü¯vÂÙ¸CK4°ÉVô>X‚°B:¦ÎEÚ°ÃÃ¤Üö¬Ú°0ùøáCU°á4¼‡Ç`O°ó^jKÔ°ß³5Ô÷«ö°Ò/È{Àr±¨ò\fM±4œÌ—¹ÉÇ°/ }Ñ]Y`°–[÷šÑ¯ó Ñ¼û£P¯%LÉ3xº®¾2Âü+®#rë¦òp‘­`¹D»p$ù¬^ï»Y¬žQ:í½»«Eo #>â«);
+    }
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
